@@ -1,0 +1,87 @@
+{% extends "index.html" %}
+
+
+{%block content %}
+
+
+<div class="center">
+
+<div class="row">
+
+<div class="column" id="Col1">
+
+    
+        <div id="imageFilter"  ></div>
+        <div class="input-group mb-3">
+        <input type="file"  class="form-control" id="imageFilterinput" accept="image/*" required="required">
+        </div>
+
+</div>
+
+<div class="column" id="Col2">
+    <div id="Addnoise" ></div>
+    
+</div>
+
+<div class="column" id="Col3">
+    <div id="ApplyFilter" ></div>
+   
+</div>
+
+</div>
+</div>
+
+
+<br><br><br>
+<div class="center">
+             
+<div id="controll_container">
+
+    <div id="divAddNoiseLabel">     
+    <!-- <label  id="AddNoiseLabel">Add Noise</label>           -->
+    <select name="Noise_type" id="Noise_type" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"  >
+        <option value="Uniform">    Add Uniform Noise</option>
+        <option value="Gaussian">Add  Gaussian Noise</option>
+        <option value="Salt"> Add Salt Noise</option>
+    </select>
+
+   </div>
+
+<div id="divAddFilterLabel">
+   
+    <select name="Filter_Type" id="Filter_Type" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+       
+        <option value="Gaussian">Apply Gaussian Filter     </option>
+        <option value="Average">Apply Average Filter</option>
+        <option value="Median">Apply Median Filter</option>
+       
+    </select>
+</div>
+
+<div id="divSizeofFilter">
+    
+    <select name="SizeFilter" id="SizeFilter" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option value="3"> Size of Filter = 3</option>
+        <option value="5">Size of Filter = 5</option>
+        <option value="7">Size of Filter = 7 </option>
+        <option value="9">Size of Filter = 9 </option>
+        <option value="11">Size of Filter = 11 </option>
+       
+    </select>
+</div>
+    <button id="submit_btn" class="btn btn-outline-dark" >Submit</button>
+
+</div>
+
+
+
+
+
+</div>
+    
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/filter.css') }}">
+<script  src="{{ url_for('static', filename='js/filter.js') }}"></script> 
+
+
+{% endblock %}

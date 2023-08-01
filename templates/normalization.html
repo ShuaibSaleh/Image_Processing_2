@@ -1,0 +1,127 @@
+{% extends "index.html" %}
+
+
+{%block content %}
+
+<!-- <div class="center">
+
+    <div class="row">
+    
+    <div class="column" id="Col1">
+    
+        
+            <div id="inputImage"  ></div>
+            <div class="input-group mb-3">
+            <input type="file"  class="form-control" id="imageinput" accept="image/*" required="required">
+            </div>
+    
+    </div>
+    
+    <div class="column" id="Col2">
+        <div id="imageoutput" ></div>
+    </div>
+    
+
+    </div>
+</div>
+
+
+
+<div class="center">
+
+
+    <div class="row">
+            <div class="column" id="Col3">
+                    <div id="imageNormalization"  ></div>
+            </div>
+            
+            <div class="column" id="Col4">
+                <div id="histimageNormalization" ></div>
+            </div>
+            <div class="column" id="Col5">
+                <button id="submit_btn" class="btn btn-outline-dark">Submit</button>
+                <br><br>
+                <select name="selectEqual" id="selectEqual" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value="equalization">Equalization</option>
+                    <option value="normalization">Normalization</option>
+                </select>
+                
+            </div>
+    </div>
+
+   
+</div>
+
+ -->
+
+
+ <div class="center">
+
+
+    <div class="row">
+        <div class="column" id="Col2">
+            <h5> histogram of Input image</h5>
+            <div id="imageoutput" ></div>
+        </div>
+
+            <div class="column" id="Col3">
+                <h5> output image</h5>
+                    <div id="imageNormalization"  ></div>
+            </div>
+            
+            <div class="column" id="Col4">
+                <h5> histogram of  output image</h5>
+                <div id="histimageNormalization" ></div>
+            </div>
+
+    </div>
+</div>
+
+
+<br><br>
+ <div class="center">
+
+    <div class="row">
+
+        <div class="column" id="Col1">
+    
+        
+            <div id="inputImage"  ></div>
+            <div class="input-group mb-3">
+            <input type="file"  class="form-control" id="imageinput" accept="image/*" required="required">
+            </div>
+    
+    </div>
+
+
+          <div class="column" id="Col6">
+            <br><br><br><br><br><br>
+            <select name="selectEqual" id="selectEqual" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="equalization">Equalization</option>
+                <option value="normalization">Normalization</option>
+            </select>
+            <button id="submit_btn" class="btn btn-outline-dark" >Submit</button>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/normalization.css') }}">
+<script  src="{{ url_for('static', filename='js/normalization.js') }}"></script> 
+    
+{% endblock %}

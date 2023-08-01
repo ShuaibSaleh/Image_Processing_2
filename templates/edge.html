@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+
+{%block content %}
+
+<br> <br> <br>
+<div class="center">
+
+<div class="row">
+
+<div class="column" id="Col1">
+
+    
+        <div id="imageEdges"  ></div>
+        <div class="input-group mb-3">
+        <input type="file"  class="form-control" id="imageinput" accept="image/*" required="required">
+        </div>
+
+</div>
+
+<div class="column" id="Col2">
+    <div id="ApplyEdges" ></div>
+</div>
+
+</div>
+</div>
+
+<br><br><br>
+<div class="center">
+             
+    <div id="controll_container">
+
+        <div id="divApplyEdgesLabel">     
+        <!-- <label  id="AddNoiseLabel">Add Noise</label>           -->
+        <select name="Edge Detection Method" id="edgedetectmethod" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option > Choose Operator</option>
+            <option value="Sobel">Sobel</option>
+            <option value="Roberts">Roberts</option>
+            <option value="Prewitt">Prewitt</option>
+            <!-- <option value="Canny"> Salt</option> -->
+        </select>
+
+    </div>
+
+        <button id="submit_btn" class="btn btn-outline-dark">Submit</button>
+
+    </div>
+
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/edge.css') }}">
+<script  src="{{ url_for('static', filename='js/edge.js') }}"></script> 
+
+
+{% endblock %}

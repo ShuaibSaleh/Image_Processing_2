@@ -1,0 +1,85 @@
+{% extends "index.html" %}
+
+
+{%block content %}
+
+<div class="row">
+
+    <div class="column" id="imagesCol">
+        <div class="images" id="input_images">
+                <div class="imagediv1" class="input-group mb-3" >
+                    <div id="imageA"></div>
+                    <div class="input-group mb-3">
+                    <input type="file"  class="form-control" id="imageA_input" accept="image/*" required="required">
+                    </div>
+            
+                </div>
+
+                <div class="imagediv2">
+                    <div id="imageB"></div>
+                    <div class="input-group mb-3">
+                        <input type="file"  class="form-control" id="imageB_input" accept="image/*" required="required">
+                    </div>
+        
+                </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+        
+    <div class="column" id="controlCol">
+
+        
+        
+            
+
+            <div id="controll_container">
+                <label for="filters_types">Choose Combination:</label>
+                <select name="filters_types" id="filters_types" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value=0>LPF Of ImgA + HPF Of ImgB</option>
+                    <option value=1>LPF Of ImgB + HPF Of ImgA</option>
+                </select>
+                <label for="lpf_D0">Choose LPF D0:</label>
+                <select name="lpf_D0" id="lpf_D0" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value=10> 10</option>
+                    <option value=20> 20</option>
+                    <option value=30> 30</option>
+                    <option value=50> 50</option>
+                    <option value=100> 100</option>
+                </select>
+                <label for="hpf_D0">Choose HPF D0:</label>
+                <select name="hpf_D0" id="hpf_D0" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value=10> 10</option>
+                    <option value=20> 20</option>
+                    <option value=30> 30</option>
+                    <option value=50> 50</option>
+                    <option value=100> 100</option>
+                </select>
+                
+                <button id="submit_btn" class="btn btn-outline-dark">Result</button>
+        
+            </div>
+        
+        
+    </div>
+
+
+    <div class="column" id="imagesCol">
+        <div class="images" >
+            <div class="imagediv3" id="imagediv3">
+                <div id="imageC"></div>
+            
+
+            </div>
+        
+        </div>
+    </div>
+
+
+</div>
+
+<script  src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
